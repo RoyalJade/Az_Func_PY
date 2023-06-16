@@ -30,3 +30,12 @@ steps:
   inputs:
     PathtoPublish: '$(System.DefaultWorkingDirectory)/build$(Build.BuildId).zip'
     artifactName: 'drop'
+    
+- task: AzureFunctionApp@2
+  inputs:
+    azureSubscription: 'SC-enriqueme'
+    appType: 'functionAppLinux'
+    appName: 'emcteste'
+    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+    runtimeStack: 'PYTHON|3.9'
+    deploymentMethod: 'auto'
