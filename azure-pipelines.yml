@@ -33,7 +33,7 @@ steps:
     
 - task: AzureFunctionApp@2
   inputs:
-    azureSubscription: 'SC-enriqueme'
+    azureSubscription: 'ServiceConnection-enriqueme'
     appType: 'functionAppLinux'
     appName: 'EMCab'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
