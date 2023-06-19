@@ -35,7 +35,7 @@ steps:
   inputs:
     azureSubscription: 'SC-enriqueme'
     appType: 'functionAppLinux'
-    appName: 'emcteste'
+    appName: 'EMCab'
     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
     runtimeStack: 'PYTHON|3.9'
     deploymentMethod: 'auto'
