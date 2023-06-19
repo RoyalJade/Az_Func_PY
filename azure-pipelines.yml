@@ -31,11 +31,11 @@ steps:
     PathtoPublish: '$(System.DefaultWorkingDirectory)/build$(Build.BuildId).zip'
     artifactName: 'drop'
     
-- task: AzureFunctionApp@2
-  inputs:
-    azureSubscription: 'ServiceConnection-enriqueme'
-    appType: 'functionAppLinux'
-    appName: 'EMCab'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    runtimeStack: 'PYTHON|3.9'
-    deploymentMethod: 'auto'
+# - task: AzureFunctionApp@2
+#   inputs:
+#     azureSubscription: 'ServiceConnection-enriqueme'
+#     appType: 'functionAppLinux'
+#     appName: 'EMCab'
+#     package: '$(System.DefaultWorkingDirectory)/**/*.zip'
+#     runtimeStack: 'PYTHON|3.9'
+#     deploymentMethod: 'auto'
